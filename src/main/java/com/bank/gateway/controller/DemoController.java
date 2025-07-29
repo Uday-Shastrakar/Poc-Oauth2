@@ -15,4 +15,9 @@ public class DemoController {
     public String privateApi(){
         return "this is private endpoint";
     }
+
+    @GetMapping("/def")
+    public String defApi(){
+        return "this is def endpoint";
+    }
 }

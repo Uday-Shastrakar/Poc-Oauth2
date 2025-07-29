@@ -27,7 +27,7 @@ public class SecurityConfig {
                 .authorizeExchange(exchanges -> exchanges
                         .pathMatchers("/api/public/**").hasRole("Normal")
                         .pathMatchers("/api/private/**").hasRole("admin")
-//                        .anyExchange().authenticated()
+                        .anyExchange().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
                         .jwt(jwtSpec -> jwtSpec.jwtAuthenticationConverter(grantedAuthoritiesExtractor())))
